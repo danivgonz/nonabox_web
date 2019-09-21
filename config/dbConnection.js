@@ -1,18 +1,12 @@
-var mysql = require('mysql');
-
-var conecMySQL = function() {
-  console.log('Conexao foi estabelecida');
-  return mysql.createConnection(
-  {
-    host : 'localhost',
-    user : 'root',
-    password : 'labfiap#2019$',
-    database : 'sistema_produtos'
-  }
-);
-}
-
-module.exports = function(){ // abre funcao
-  console.log('O Autoload carregou o módulo de conexão');
-  return conecMySQL;
-} // fecha funcao
+// Your web app's Firebase configuration
+var firebaseConfig = {
+  apiKey: "AIzaSyC8zYu-8325mE-fOB_wB7_gX0DfWtJINkE",
+  authDomain: "nonabox-fiap.firebaseapp.com",
+  databaseURL: "https://nonabox-fiap.firebaseio.com",
+  projectId: "nonabox-fiap",
+  storageBucket: "nonabox-fiap.appspot.com",
+  messagingSenderId: "267192402401",
+  appId: "1:267192402401:web:e7cafec9daeb258a3ed2a0"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
