@@ -6,6 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "engines": {
+    "node": "8"
+  },
   "keywords": [
     "remédios",
     "caixa",
@@ -21,6 +24,8 @@
     "ejs": "^2.7.1",
     "express": "^4.17.1",
     "express-validator": "^6.2.0",
-    "mysql": "^2.17.1"
+    "firebase": "^6.6.2",
+    "mysql": "^2.17.1",
+    "nodemon": "^1.19.2"
   }
 }
