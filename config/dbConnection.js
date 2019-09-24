@@ -17,3 +17,7 @@ var firebaseConfig = {
 };
 
 firebase.initializeApp(firebaseConfig);
+
+var database = firebase.database();
+
+//https://firebase.google.com/docs/database/web/read-and-write?hl=pt-br
