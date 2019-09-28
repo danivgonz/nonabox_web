@@ -1,0 +1,38 @@
+.login{
+    background-color: var(--green);
+    height: 100vh;
+    width: 100%;
+}
+
+.login-bg{
+    background: url('../images/login/bg.jpg') top left no-repeat; 
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    width: 70%;
+}
+
+.login-box{
+    background-color: #ffffff;
+    border-radius: 7px;
+    -webkit-box-shadow: 0px 0px 11px -2px rgba(0,0,0,0.56);
+    -moz-box-shadow: 0px 0px 11px -2px rgba(0,0,0,0.56);
+    box-shadow: 0px 0px 11px -2px rgba(0,0,0,0.56);
+    max-width: 400px;
+    padding: 40px;
+    position: absolute;
+    right: -35%;
+    transform: translateY(-50%);
+    top: 50%;
+    width: 55%;
+}
+
+.login-box-title{
+    color: var(--green);
+    font-family: 'Proxima Nova Bold', 'Calibri', Arial, sans-serif;
+    font-size: 25px;
+    margin-top: 20px;
+    padding-bottom: 10px;
+    width: 100%;
+    text-align: center;
+}

@@ -1,0 +1,13 @@
+.footer{
+    background-color: var(--green);
+    height: 5vh;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.footer-text{
+    color: #ffffff;
+    font-family: 'Proxima Nova Light', 'Calibri', Arial, sans-serif;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}

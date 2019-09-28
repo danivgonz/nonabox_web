@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>nona box</title>
+
+    <!-- <link href="css/styles.css" rel="stylesheet"> -->
+</head>
+
+<body>
+	<nav class="nav">
+		<div class="nav-wrapper">
+			<div class="nav-brand">
+				<h1><a href="/"><img src="images/brand/logo-branco.svg" alt="nonabox - logo" class="nav-brand-image"></a></h1>  
+			</div>
+			<div class="nav-items">
+				<ul class="nav-list">
+					<li class="nav-list-item"><a href="/cadastrar" class="nav-list-item-link">Cadastre-se</a></li>
+					<li class="nav-list-item active"><a href="/login" class="nav-list-item-link">Login</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="cadastro">
+			<div class="cadastro-bg">
+				<div class="wrapper">
+					<div class="cadastro-title">
+						<h2>Cuidando de quem você mais ama!</h2>
+						<p>Pensado para você ajudar a cuidar de quem sempre cuidou de você</p>
+					</div>
+		
+
+					<div class="cadastro-box">
+						<h3 class="cadastro-box-title">Complete os seus dados</h3>
+						<form action="/cadastrar/sucesso" method="post" class="form">
+							<div class="form-columns">
+								<div class="form-column">
+									<input type="text" name="nome" class="form-textbox" placeholder="Nome">
+									<input type="email" name="email" class="form-textbox" placeholder="Email">
+									<input type="text" name="dataNasc" class="form-textbox" placeholder="Data de Nascimento">
+								</div>
+								<div class="form-column">
+									<input type="tel" name="telefone" class="form-textbox" placeholder="Telefone">
+									<input type="text" name="sexo" class="form-textbox" placeholder="Sexo">
+									<input type="password" name="senha" class="form-textbox" placeholder="Senha">
+									<input type="password" name="confirmarSenha" class="form-textbox" placeholder="Confirmar Senha">
+								</div>
+							</div>
+							<input type="submit" name="cadastrar" value="Cadastrar" class="form-button">
+						</form>  
+					</div>
+				</div>
+			</div>
+		</div>
+		
+
+	<footer class="footer">
+		<div class="wrapper">
+			<p class="footer-text"><span class="text-bold">nona box</span> - Todos os direitos reservados</p>
+		</div>
+	</footer>
+</body>
+</html>	

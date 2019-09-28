@@ -1,0 +1,26 @@
+*{
+    --green: #009aa4;
+    --gray: #434041;
+    font-family: 'Proxima Nova Regular', 'Calibri', Arial, sans-serif;
+    font-size: 12px;
+}
+
+.text-bold{
+    font-family: 'Proxima Nova Bold', 'Calibri', Arial, sans-serif;
+}
+
+.text-light{
+    font-family: 'Proxima Nova Light', 'Calibri', Arial, sans-serif;
+}
+
+.wrapper{
+    margin: 0 auto;
+    max-width: 1620px;
+    width: 90%;
+}
+
+@media screen and (max-width: 1000px) {
+    .br-desktop {
+        display: none;
+    }
+}

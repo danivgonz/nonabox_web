@@ -1,0 +1,55 @@
+.nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.nav-wrapper {
+    align-items: center;
+    display: flex;
+    height: 80px;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 90%;
+}
+ 
+.nav-brand-image {
+    height: 25px;
+}
+
+.nav-list {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-list-item {
+    border-radius: 7px;
+    cursor: pointer;
+    padding: 12px 20px;
+    transition: opacity ease 0.5s;
+}
+
+.nav-list-item:hover{
+    opacity: 0.8;
+}
+
+.nav-list-item.active {
+    background-color: #ffffff;
+}
+
+.nav-list-item-link {
+    color: #ffffff;
+    font-family: 'Proxima Nova Regular', 'Calibri', Arial, sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.2px;
+    padding: 12px 20px;
+    text-decoration: none;
+    transition: opacity ease 0.5s;
+}
+
+.nav-list-item.active .nav-list-item-link {
+    color: var(--green);
+}

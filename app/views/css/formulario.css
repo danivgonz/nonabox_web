@@ -1,0 +1,46 @@
+.form-columns{
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-column{
+    width: 45%;
+}
+
+.form-group{
+    margin: 50px 0;
+}
+
+.form-textbox{
+    border: none;
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+    display: block;
+    font-family: 'Proxima Nova Regular', 'Calibri', Arial, sans-serif;
+    margin: 30px 0;
+    padding: 8px 20px;
+    transition: all ease 0.5s;
+    width: 100%;
+}
+    .form-textbox:hover{
+        border-bottom-color: rgba(0,0,0,0.3);
+    }
+
+    .form-textbox:focus{
+        border-bottom-color: var(--green);
+    }
+
+.form-button{
+    background-color: var(--green);
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: 'Proxima Nova Regular', 'Calibri', Arial, sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+    padding: 10px 16px;
+    transition: opacity ease 0.5s;
+}
+
+.form-button:hover{
+    opacity: 0.8;
+}
