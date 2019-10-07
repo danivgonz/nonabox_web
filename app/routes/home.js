@@ -1,7 +1,18 @@
 module.exports = function(app){
 
   app.get('/', function(req, res){
-    res.render('home/index');
+    let db = app.config.dbConnection;
+
+    db.collection('users').get()
+      .then((snapshot) => {
+          snapshot.forEach((doc) => {
+          console.log(doc.id, '=>', doc.data());
+          });
+          res.render('home/index');
+      })
+      .catch((err) => {
+          console.log('Error getting documents', err);
+      });
   });
 
 }
