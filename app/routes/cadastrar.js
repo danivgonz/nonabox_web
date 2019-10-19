@@ -1,6 +1,10 @@
 module.exports = function(app){
   app.get('/cadastrar', function(req, res){
-    res.render('cadastrar/cadastrar');
+    app.app.controllers.cadastrar_usuario.form_add_usuario(app, req, res);
+  })
+
+  app.post('/cadastrar/deu-certo', function(req, res){
+    app.app.controllers.cadastrar_usuario.add_usuario(app, req, res);
   })
  
  
@@ -10,7 +14,7 @@ module.exports = function(app){
     db.collection('users').get()
       .then((snapshot) => {
           snapshot.forEach((doc) => {
-          // console.log(doc.id, '=>', doc.data());
+            console.log(doc.id, '=>', doc.data());
           });
           res.render('home/index');
       })

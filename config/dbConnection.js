@@ -5,6 +5,6 @@ admin.initializeApp({
     credential: admin.credential.cert(serviceAccount)
 });
 
-let db = admin.firestore();
+let db = function () { return admin.firestore() };
 
-module.exports = db;
+module.exports = function () { return db } ;

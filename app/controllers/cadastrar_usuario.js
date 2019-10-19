@@ -1,15 +1,40 @@
 module.exports.form_add_usuario = function(app, req, res) {
-    res.render('cadastrar/cadastrar');
+    res.render('cadastrar/cadastrar', {validacao : {}, cliente : {}});
 }
 
 module.exports.add_usuario = function(app, req, res){
-    var usuario = req.body;
+    let usuario = req.body;
+    // console.log(usuario)
+    res.send(usuario)
 
-    console.log(usuario)
+    req.assert('nome', 'Nome é obrigatório').notEmpty();
+    req.assert('email', 'Email é obrigatório').notEmpty();
+    req.assert('dataNasc', 'Data de nascimento é obrigatório').notEmpty(); 
+    req.assert('telefone', 'Telefone é obrigatório').notEmpty(); 
+    req.assert('sexo', 'Sexo é obrigatório').notEmpty(); 
+    // req.assert('senha').custom((value, { req }) => {
+    //     if (value !== usuario.confirmarSenha) {
+    //       throw new Error('A confirmação da senha está incorreta!');
+    //     }
+    //   })
+  
+    let erros = req.validationErrors();
+  
+    console.log(erros);
+    // console.log(produto);
+    
+    if(erros){
+      res.render('cadastrar', {validacao : erros, produto : produto});
+      return;
+    }
 
-    var firebase = app.config.dbConnection();
-    var UsuariosDAO = new app.app.models.UsuariosDAO(firebase);
 
-    UsuariosDAO.inserirUsuario(1, 'Italo', 'italo@teste.com', '24/12/1996', '11978541254', 'M', 'testando')
+    let db = app.config.dbConnection();
+    console.log(db);
+    let UsuariosDAO = new app.app.models.UsuariosDAO(db);
+
+    UsuariosDAO.getUsuarios();
+
     res.redirect('/');
+  
 }
