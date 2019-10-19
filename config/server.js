@@ -2,14 +2,15 @@ var express = require('express');
 var consign = require('consign');
 var bodyParser = require('body-parser');
 var expressValidator = require('express-validator');
+var appInsights = require('applicationinsights');
 
+appInsights.setup('ec7c73e3-2b59-43ac-9fac-7978f199d821').start();
 
 var app = express();
-//var mensagem = require('./modulo_teste');
-// A engine de view mudou. Será  EJS e para setarmos isso na propriedade do node
-// iremos utilizar:
+
 app.set('view engine', 'ejs');
 app.set('views', './app/views');
+app.use(express.static('./app/public'));
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(expressValidator());

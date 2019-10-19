@@ -1,21 +1,10 @@
-var firebase = require("firebase/app");
+let admin = require('firebase-admin');
+let serviceAccount = require('./serviceAccountKey.json');
 
-require("firebase/auth");
-require("firebase/database");
+admin.initializeApp({
+    credential: admin.credential.cert(serviceAccount)
+});
 
-var firebaseConfig = {
-  apiKey: "AIzaSyC8zYu-8325mE-fOB_wB7_gX0DfWtJINkE",
-  authDomain: "nonabox-fiap.firebaseapp.com",
-  databaseURL: "https://nonabox-fiap.firebaseio.com",
-  projectId: "nonabox-fiap",
-  storageBucket: "nonabox-fiap.appspot.com",
-  messagingSenderId: "267192402401",
-  appId: "1:267192402401:web:e7cafec9daeb258a3ed2a0"
-};
+let db = admin.firestore();
 
-firebase.initializeApp(firebaseConfig);
-var database = firebase.database();
-
-module.exports = function() {
-  return database;
-}
+module.exports = db;
