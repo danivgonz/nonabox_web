@@ -15,6 +15,7 @@ var firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 var database = firebase.database();
+
 module.exports = function() {
   return database;
 }
