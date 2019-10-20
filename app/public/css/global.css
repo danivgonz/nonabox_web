@@ -5,6 +5,13 @@
     font-size: 12px;
 }
 
+.scroll {
+    display: block;
+    max-height: 100vh;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
 .text-bold{
     font-family: 'Proxima Nova Bold', 'Calibri', Arial, sans-serif;
 }

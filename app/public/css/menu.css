@@ -3,7 +3,12 @@
     top: 0;
     left: 0;
     width: 100%;
+    transition: all ease 0.5s;
     z-index: 100;
+}
+
+.nav.is-active {
+    background-color: var(--green);
 }
 
 .nav-wrapper {

@@ -44,3 +44,15 @@
 .form-button:hover{
     opacity: 0.8;
 }
+
+.form-erro {
+    
+}
+
+.form-erro-item {
+    font-family: 'Proxima Nova Regular', 'Calibri', Arial, sans-serif;
+    font-size: 14px;
+    list-style: disc;
+    margin-left: 20px;
+    padding: 4px 0;
+}

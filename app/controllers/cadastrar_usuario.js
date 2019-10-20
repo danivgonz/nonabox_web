@@ -1,11 +1,11 @@
 module.exports.form_add_usuario = function(app, req, res) {
-    res.render('cadastrar/cadastrar', {validacao : {}, cliente : {}});
+    res.render('cadastrar/cadastrar', {validacao : {}});
 }
 
 module.exports.add_usuario = function(app, req, res){
     let usuario = req.body;
     // console.log(usuario)
-    res.send(usuario)
+    // res.send(usuario)
 
     req.assert('nome', 'Nome é obrigatório').notEmpty();
     req.assert('email', 'Email é obrigatório').notEmpty();
@@ -19,22 +19,17 @@ module.exports.add_usuario = function(app, req, res){
     //   })
   
     let erros = req.validationErrors();
-  
     console.log(erros);
-    // console.log(produto);
     
     if(erros){
-      res.render('cadastrar', {validacao : erros, produto : produto});
+      res.render('cadastrar/cadastrar', {validacao : erros});
       return;
     }
 
-
     let db = app.config.dbConnection();
-    console.log(db);
     let UsuariosDAO = new app.app.models.UsuariosDAO(db);
 
-    UsuariosDAO.getUsuarios();
+    UsuariosDAO.inserirUsuario(usuario);
 
     res.redirect('/');
-  
 }

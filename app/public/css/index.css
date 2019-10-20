@@ -279,3 +279,19 @@
 .nonabox-home-contato-box-textarea:focus {
     border-color: var(--green);
 }
+
+@media (max-width: 1250px){
+    .nonabox-home-header{
+        height: 80vh;
+    }
+
+    .nonabox-home-intro {
+        margin-top: 0px;
+    }
+
+    .nonabox-home-intro:before{
+        height: 380px;
+        top: -90px;
+    }
+}
+
