@@ -1,14 +1,5 @@
 
 # Created by https://www.gitignore.io/api/git,node,sass,macos,windows,angular,phpstorm,visualstudiocode
-# Edit at https://www.gitignore.io/?templates=git,node,sass,macos,windows,angular,phpstorm,visualstudiocode
-
-### Angular ###
-## Angular ##
-# compiled output
-/dist
-/tmp
-/app/**/*.js
-/app/**/*.js.map
 
 # dependencies
 /node_modules
