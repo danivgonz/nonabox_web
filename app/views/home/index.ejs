@@ -66,7 +66,7 @@
                 tomar os remédios nos horários certos.
               </p>
               <div class="nonabox-home-intro-button-content">
-                <a href="#contato" class="nonabox-home-intro-button">Entre em contato</a>
+                <a href="#contato" class="nonabox-home-intro-button">Receba novidades</a>
               </div>
             </div>
           </div>
@@ -123,17 +123,22 @@
           </p>
         </div>
 
-            <form action="/salvar" method="post" class="nonabox-home-contato-form">
+            <form action="/sucesso" method="post" class="nonabox-home-contato-form">
               <input type="text" name="nome" class="nonabox-home-contato-box-text form-textbox" placeholder="Nome">
               <input type="email" name="email" class="nonabox-home-contato-box-text form-textbox" placeholder="Email">
+              <% if(validacao) { %>
+                <ul class="form-erro">
+                  <% for(var i = 0; i < validacao.length; i++) {%>
+                    <li class="form-erro-item"><%= validacao[i].msg %></li>
+                  <% } %>    
+                </ul>   
+              <% } %>    
               <input type="submit" class="form-button">
             </form>
           </div>
         </div>
       </section>
     </div>
-
-
 
     <footer class="footer">
       <div class="wrapper">

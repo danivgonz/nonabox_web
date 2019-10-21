@@ -17,7 +17,7 @@ UsuariosDAO.prototype.inserirUsuario = function (user) {
     });
 }
 
-UsuariosDAO.prototype.getUsuarios = function () {
+UsuariosDAO.prototype.buscarUsuarios = function () {
     this._db.collection('users').get()
       .then((snapshot) => {
           snapshot.forEach((doc) => {
@@ -26,6 +26,24 @@ UsuariosDAO.prototype.getUsuarios = function () {
       })
       .catch((err) => {
           console.log('Error getting documents', err);
+      });
+}
+
+UsuariosDAO.prototype.loginUsuario = function (user) {
+    let usersRef = this._db.collection('users');
+    let query = usersRef.where('email', '==', user.email).where('senha', '==', user.senha).get()
+      .then(snapshot => {
+        if (snapshot.empty) {
+          console.log('Usuário não cadastrado!');
+          return;
+        }
+    
+        snapshot.forEach(doc => {
+          console.log(doc.id, '=>', doc.data());
+        });
+      })
+      .catch(err => {
+        console.log('Error getting documents', err);
       });
 }
 

@@ -4,7 +4,7 @@
 
 .nonabox-home:after {
     background: url("../images/home/header.png") center -60px no-repeat;
-    background-size: contain;
+    background-size: 100%;
     content: '';
     display: block;
     height: 100%;
